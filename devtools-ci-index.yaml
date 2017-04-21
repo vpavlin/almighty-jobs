@@ -794,7 +794,7 @@
             git_repo: almighty-core
             ci_project: 'devtools'
             ci_cmd: '/bin/bash cico_build_deploy.sh'
-            svc_name: core
+            template_name: '/openshift/core.app.yaml'
             timeout: '20m'
         - '{ci_project}-{git_repo}-build-master-coverage':
             git_repo: almighty-core
@@ -832,21 +832,21 @@
             git_repo: fabric8-ui
             ci_project: 'devtools'
             ci_cmd: '/bin/bash cico_build_deploy.sh'
-            svc_name: f8ui
+            template_name: /openshift/fabric8-ui.app.yaml
             timeout: '20m'
         - '{ci_project}-{git_repo}-build-master':
             git_organization: openshiftio
             git_repo: www.openshift.io
             ci_project: 'devtools'
             ci_cmd: '/bin/bash cico_build_deploy.sh'
-            svc_name: wwwopenshiftio
+            template_name: /openshift/www.openshift.io.app.yaml
             timeout: '20m'
         - '{ci_project}-{git_repo}-build-master':
             git_organization: fabric8io
             git_repo: fabric8-forker
             ci_project: 'devtools'
             ci_cmd: '/bin/bash cico_build_deploy.sh'
-            svc_name: f8forker
+            template_name: /openshift/fabric8-forker.app.yaml
             timeout: '10m'
         - '{ci_project}-{git_repo}-build-master':
             git_organization: fabric8io
@@ -860,7 +860,7 @@
             git_repo: che-starter
             ci_project: 'devtools'
             ci_cmd: '/bin/bash cico_build_deploy.sh'
-            svc_name: che-starter
+            template_name: /openshift-template/che-starter.app.yaml
             timeout: '20m'
         - '{ci_project}-{git_repo}-build-master':
             git_organization: redhat-developer
@@ -914,7 +914,7 @@
             ci_project: 'devtools'
             ci_cmd: '/bin/bash cico_build_deploy.sh'
             timeout: '30m'
-            svc_name: keycloak-server
+            template_name: /openshift/keycloak.app.yaml
         - '{ci_project}-{git_repo}':
             git_organization: almighty
             git_repo: keycloak
@@ -959,16 +959,16 @@
             git_repo: launchpad-frontend
             ci_project: 'devtools'
             ci_cmd: '/bin/bash cico_build_deploy.sh'
-            svc_name: launchpad-frontend
+            template_name: /openshift/obsidian-generator-frontend.app.yaml
         - '{ci_project}-{git_repo}-generator-build-master':
             git_organization: openshiftio
             git_repo: launchpad-backend
             ci_project: 'devtools'
             ci_cmd: '/bin/bash cico_build_deploy.sh'
-            svc_name: launchpad-backend
+            template_name: /openshift/launchpad-backend.app.yaml
         - '{ci_project}-{git_repo}-generator-build-master':
             git_organization: openshiftio
             git_repo: launchpad-missioncontrol
             ci_project: 'devtools'
             ci_cmd: '/bin/bash cico_build_deploy.sh'
-            svc_name: catapult
+            template_name: /catapult_os_template.yaml
